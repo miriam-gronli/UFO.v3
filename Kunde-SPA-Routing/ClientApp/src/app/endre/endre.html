@@ -1,0 +1,142 @@
+<!-- <div class="container">
+  <div class="col-md-4">
+    <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
+      <input class="form-control" formControlName="id" type="hidden" />
+      <div class="form-group">
+        <label>Navn</label>
+        <input class="form-control" formControlName="navn" />
+        <p class="alert alert-warning" [hidden]="skjema.controls.navn.valid || (skjema.controls.navn.pristine && !submitted)">
+          Navn er obligatorisk.
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Postkode</label>
+        <input class="form-control" formControlName="postkode" />
+        <p class="alert alert-warning" [hidden]="skjema.controls.postkode.valid || (skjema.controls.postkode.pristine && !submitted)">
+          Postkode er obligatorisk (4 siffer)
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Beskrivelse</label>
+        <input class="form-control" formControlName="beskrivelse" />
+        <p class="alert alert-warning" [hidden]="skjema.controls.beskrivelse.valid || (skjema.controls.beskrivelse.pristine && !submitted)">
+          Beskrivelse er obligatorisk.
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Dato</label>
+        <input class="form-control" formControlName="dato" />
+        <p class="alert alert-warning" [hidden]="skjema.controls.dato.valid || (skjema.controls.dato.pristine && !submitted)">
+          Dato er obligatorisk.
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Tid</label>
+        <input class="form-control" formControlName="tid" />
+        <p class="alert alert-warning" [hidden]="skjema.controls.tid.valid || (skjema.controls.tid.pristine && !submitted)">
+          Tid er obligatorisk.
+        </p>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="!skjema.valid" class="btn btn-primary">Endre</button>
+        <button class="btn btn-default" routerLink="/liste">Tilbake</button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="endre.ts"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- Navigasjonsbar
+  <header>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="lagre.html">Observasjon</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </div>
+  </header>
+  -->
+  <!--Bakgrunn med overskrift-->
+  <div class="text-center">
+    <h1 class="overskrift">Fortell oss det du vet!</h1>
+  </div>
+
+  <!--Registreringsskjema-->
+  <div class="text-center">
+    <div class="">
+      <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
+        <input class="form-control" formControlName="id" type="hidden" />
+
+        <h2>Din observasjon</h2>
+        <hr class="tynnlinje">
+
+        <div class="row">
+          <div class="form-group containerNavn text-left col">
+            <label class="form-label" for="Navn">Navn</label>
+            <input type="text" id="Navn" placeholder="Ditt navn..." class="form-control" formControlName="navn">
+            <p class="alert alert-warning" [hidden]="skjema.controls.navn.valid || (skjema.controls.navn.pristine && !submitted)">
+              Navn er obligatorisk.
+            </p>
+          </div>
+
+          <div class="form-group containerPostkode text-left col">
+            <label class="form-label" for="Postkode">Postkode</label>
+            <input type="text" id="Postkode" placeholder="Din postkode..." class="form-control" formControlName="postkode">
+            <p class="alert alert-warning" [hidden]="skjema.controls.postkode.valid || (skjema.controls.postkode.pristine && !submitted)">
+              Postkode er obligatorisk (4 siffer).
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group containerDato text-left col">
+            <label class="form-label" for="Dato">Dato</label>
+            <input type="text" id="Dato" placeholder="Dato.." class="form-control" formControlName="dato">
+            <p class="alert alert-warning" [hidden]="skjema.controls.dato.valid || (skjema.controls.dato.pristine && !submitted)">
+              Dato er obligatorisk.
+            </p>
+          </div>
+
+          <div class="form-group containerTidspunkt text-left col">
+            <label class="form-label" for="Tidspunkt">Tidspunkt</label>
+            <input type="text" id="Tid" placeholder="Tid.." class="form-control" formControlName="tid">
+            <p class="alert alert-warning" [hidden]="skjema.controls.tid.valid || (skjema.controls.tid.pristine && !submitted)">
+              Tid er obligatorisk.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="form-group containerObv text-left">
+          <label class="form-label" for="Observasjoner">Din observasjon av UFO</label>
+          <textarea type="text" id="Obv" placeholder="Gi en kort beskrivelse av din observasjon.." rows="12" class="form-control" formControlName="beskrivelse"></textarea>
+          <p class="alert alert-warning" [hidden]="skjema.controls.beskrivelse.valid || (skjema.controls.beskrivelse.pristine && !submitted)">
+            Beskrivelse er obligatorisk.
+          </p>
+        </div>
+
+        <!--Knapp for regestrering-->
+        <div class="containerbtn">
+          <button type="submit" [disabled]="!skjema.valid" class="btn btn-primary">Endre</button>
+          <button class="btn btn-default" routerLink="/liste">Tilbake</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<div class="col-md-4">
+  <h2>Logg inn</h2>
+
+  <div class="alert alert-danger" role="alert" [hidden]="alertContent === null">
+    {{alertContent}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="dissmissAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <form [formGroup]="skjema_loggInn" (ngSubmit)="autenticate()">
+    <div class="form-group">
+      <label for="brukernavn_field">Brukernavn Admin:</label>
+      <input type="text" class="form-control" [class.is-invalid]="!skjema_loggInn.controls.brukernavn.valid && !skjema_loggInn.controls.brukernavn.pristine" id="brukernavn_field" formControlName="brukernavn" placeholder="Brukernavn">
+      <div class="invalid-feedback">
+        Brukernavn har feil format.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="passord_field">Passord:</label>
+      <input type="password" class="form-control" [class.is-invalid]="!skjema_loggInn.controls.passord.valid && !skjema_loggInn.controls.passord.pristine" id="passord_field" formControlName="passord" placeholder="Passord">
+      <div class="invalid-feedback">
+        Passord har feil format.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!skjema_loggInn.valid">Logg inn</button>
+  </form>
+
+</div>
