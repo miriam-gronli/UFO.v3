@@ -1,72 +1,74 @@
+<!-- Koden under er inspirert og hentet fra vår gruppeprosjekt 1 og er delvis selvutviklet.
+  All kode som ikke er selvutviklet er hentet fra Kunde-SPA-Routing videoen på Canvas  -->
 <app-nav-meny></app-nav-meny>
-  <!--Bakgrunn med overskrift-->
+<!--Bakgrunn med overskrift-->
 
-  <div class="text-center">
-    <h1 class="overskrift">Fortell oss det du vet!</h1>
-  </div>
+<div class="text-center">
+  <h1 class="overskrift">Fortell oss det du vet!</h1>
+</div>
 
-  <!--Registreringsskjema-->
-  <div class="text-center">
-    <div class="skjemaLagre">
-      <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
+<!--Registreringsskjema-->
+<div class="text-center">
+  <div class="skjemaLagre">
+    <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
 
-        <h2>Din observasjon</h2>
-        <hr class="tynnlinje">
+      <h2>Din observasjon</h2>
+      <hr class="tynnlinje">
 
-        <div class="row">
-          <div class="form-group containerNavn text-left col">
-            <label class="form-label" for="Navn">Navn</label>
-            <input type="text" id="Navn" placeholder="Eks. Hans Ole" class="form-control" formControlName="navn">
-            <p class="alert alert-warning" [hidden]="skjema.controls.navn.valid || (skjema.controls.navn.pristine && !submitted)">
-              Navn er obligatorisk.
-            </p>
-          </div>
-
-          <div class="form-group containerPostkode text-left col">
-            <label class="form-label" for="Postkode">Postkode</label>
-            <input type="text" id="Postkode" placeholder="Eks. 7374" class="form-control" formControlName="postkode">
-            <p class="alert alert-warning" [hidden]="skjema.controls.postkode.valid || (skjema.controls.postkode.pristine && !submitted)">
-              Postkode er obligatorisk (4 siffer).
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="form-group containerDato text-left col">
-            <label class="form-label" for="Dato">Dato</label>
-            <input type="text" id="Dato" placeholder="Eks. 01.01.2022" class="form-control" formControlName="dato">
-            <p class="alert alert-warning" [hidden]="skjema.controls.dato.valid || (skjema.controls.dato.pristine && !submitted)">
-              Dato er obligatorisk.
-            </p>
-          </div>
-
-          <div class="form-group containerTidspunkt text-left col">
-            <label class="form-label" for="Tidspunkt">Tidspunkt</label>
-            <input type="text" id="Tid" placeholder="Eks. 20:00" class="form-control" formControlName="tid">
-            <p class="alert alert-warning" [hidden]="skjema.controls.tid.valid || (skjema.controls.tid.pristine && !submitted)">
-              Tid er obligatorisk.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="form-group containerObv text-left">
-          <label class="form-label" for="Observasjoner">Din observasjon av UFO</label>
-          <textarea type="text" id="Obv" placeholder="Gi en kort beskrivelse av din observasjon.." rows="12" class="form-control" formControlName="beskrivelse"></textarea>
-          <p class="alert alert-warning" [hidden]="skjema.controls.beskrivelse.valid || (skjema.controls.beskrivelse.pristine && !submitted)">
-            Beskrivelse er obligatorisk.
+      <div class="row">
+        <div class="form-group containerNavn text-left col">
+          <label class="form-label" for="Navn">Navn</label>
+          <input type="text" id="Navn" placeholder="Eks. Hans Ole" class="form-control" formControlName="navn">
+          <p class="alert alert-warning" [hidden]="skjema.controls.navn.valid || (skjema.controls.navn.pristine && !submitted)">
+            Navn er obligatorisk.
           </p>
         </div>
 
-        <!--Knapp for regestrering-->
-        <div class="containerbtn">
-          <button type="submit" [disabled]="!skjema.valid" class="btn btn-primary">Registrer</button>
-          <button class="btn btn-default" routerLink="/liste">Tilbake</button>
+        <div class="form-group containerPostkode text-left col">
+          <label class="form-label" for="Postkode">Postkode</label>
+          <input type="text" id="Postkode" placeholder="Eks. 7374" class="form-control" formControlName="postkode">
+          <p class="alert alert-warning" [hidden]="skjema.controls.postkode.valid || (skjema.controls.postkode.pristine && !submitted)">
+            Postkode er obligatorisk (4 siffer).
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group containerDato text-left col">
+          <label class="form-label" for="Dato">Dato</label>
+          <input type="text" id="Dato" placeholder="Eks. 01.01.2022" class="form-control" formControlName="dato">
+          <p class="alert alert-warning" [hidden]="skjema.controls.dato.valid || (skjema.controls.dato.pristine && !submitted)">
+            Dato er obligatorisk.
+          </p>
         </div>
 
-      </form>
-    </div>
+        <div class="form-group containerTidspunkt text-left col">
+          <label class="form-label" for="Tidspunkt">Tidspunkt</label>
+          <input type="text" id="Tid" placeholder="Eks. 20:00" class="form-control" formControlName="tid">
+          <p class="alert alert-warning" [hidden]="skjema.controls.tid.valid || (skjema.controls.tid.pristine && !submitted)">
+            Tid er obligatorisk.
+          </p>
+        </div>
+      </div>
 
+
+      <div class="form-group containerObv text-left">
+        <label class="form-label" for="Observasjoner">Din observasjon av UFO</label>
+        <textarea type="text" id="Obv" placeholder="Gi en kort beskrivelse av din observasjon.." rows="12" class="form-control" formControlName="beskrivelse"></textarea>
+        <p class="alert alert-warning" [hidden]="skjema.controls.beskrivelse.valid || (skjema.controls.beskrivelse.pristine && !submitted)">
+          Beskrivelse er obligatorisk.
+        </p>
+      </div>
+
+      <!--Knapp for regestrering-->
+      <div class="containerbtn">
+        <button type="submit" [disabled]="!skjema.valid" class="btn btn-primary">Registrer</button>
+        <button class="btn btn-default" routerLink="/liste">Tilbake</button>
+      </div>
+
+    </form>
   </div>
+
+</div>
 
 

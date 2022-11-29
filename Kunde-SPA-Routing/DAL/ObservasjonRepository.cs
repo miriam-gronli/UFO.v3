@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 namespace Kunde_SPA_Routing.DAL
 {
     //Denne klassen er hentet fra KundeApp2-med-DB filen i KundeApp2-med-DAL mappen fra canvas
+    //Alle linjer med logging(iLogger) er hentet fra modul videoen"Logging til fil"
     public class ObservasjonRepository : IObservasjonRepository //Klasse for å initiere CRUD metodene
     {
         private readonly ObservasjonContext _db; //Inititerer db varaiabel gjennom kontekst klassen

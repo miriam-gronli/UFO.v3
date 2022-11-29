@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-nav-meny',
   templateUrl: './meny.html'
 })
-export class Meny {
+export class Meny { //All kode i denne filen er hentet fra "Kunde-SPA-Routing" modul videoen på Canvas
   isExpanded = false;
 
   collapse() {

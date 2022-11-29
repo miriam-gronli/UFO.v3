@@ -9,11 +9,11 @@ import { Bruker } from "../Bruker";
   templateUrl: "loggInn.html"
 })
 
-export class LoggInn {
+export class LoggInn {  
   skjema_loggInn: FormGroup;
   alertContent: string;
-
-  formProfile = {
+   
+  formProfile = {  //Inputvalideringen i denne filen er hentet fra modulvideoen "Inputvalidering" på canvas, og er ellers selvutviklet eller fra internett
     brukernavn: [null, Validators.compose([Validators.required, Validators.pattern("[a-zA-Z0-9\-_]{3,15}")])],
     passord: [null, Validators.compose([Validators.required, Validators.pattern("[0-9A-Za-z]{4,64}")])]
   }
