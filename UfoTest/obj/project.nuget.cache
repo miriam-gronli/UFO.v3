@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l8hikrAjy38wKr5URK9sNndo8UWQldcfdsMzcuFO4qPdwXx1PFjnAnj8E402BnjZ8hY8q03s1gzi6wkQUaRhyw==",
+  "dgSpecHash": "phX104AgSMcbCofah5KqDvqF4UZlOS5fgk16Jt1dod5tB/IEm5VSBVZkN5c6tu5fnn7x3LH76QU3RbRJL0xzWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orosh\\source\\repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
+  "projectFilePath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orosh\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Orosh\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
