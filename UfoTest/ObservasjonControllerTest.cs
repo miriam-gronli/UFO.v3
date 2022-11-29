@@ -503,7 +503,7 @@ namespace UfoTest
             obsController.ControllerContext.HttpContext = mockHttpContext.Object;
 
             // Act
-            var resultat = await obsController.LoggInn(returBruker) as OkObjectResult;
+            var resultat = await obsController.LoggInn(returBruker) as UnauthorizedObjectResult;
 
             // Assert 
             Assert.Equal((int)HttpStatusCode.Unauthorized, resultat.StatusCode);
