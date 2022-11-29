@@ -316,7 +316,7 @@ namespace UfoTest
 
             // Assert 
             Assert.Equal((int)HttpStatusCode.OK, resultat.StatusCode);
-            Assert.Equal("Observasjon slettet", resultat.Value);
+            Assert.Equal("", resultat.Value);
         }
 
 
