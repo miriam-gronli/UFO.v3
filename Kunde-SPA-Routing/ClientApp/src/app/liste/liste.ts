@@ -37,7 +37,7 @@ export class Liste {  //All kode i denne filen er hentet fra "Kunde-SPA-Routing"
        error => console.log(error)
       );
   };
-  // CHANGED to call logout backend and redirect
+ 
   loggUt() {
     this.http.post("api/observasjon/loggut", {})
       .subscribe(success => {

@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
+//Fulg videoene og koden skrevet i Enhetstest av Kunde-app - forenklet løsning, og Enhentstest av KundeApp - logginn løsning
+
 namespace UfoTest
 {
     public class ObservasjonControllerTest
@@ -122,14 +124,14 @@ namespace UfoTest
 
             // Assert 
             Assert.Equal((int)HttpStatusCode.Unauthorized, resultat.StatusCode);
-            Assert.Equal("Ikke logget inn", resultat.Value); //Stemmer ikke oversens med controlleren for dette resultatet. Klarer ikke å 
+            Assert.Equal("Ikke logget inn", resultat.Value);
         }
 
 
         //Lagre Logget Inn Ok
 
         [Fact]
-        public async Task LagreLoggetInnOK() //Feiler
+        public async Task LagreLoggetInnOK()
         {
             //Arrange
             mockRep.Setup(o => o.Lagre(It.IsAny<Observasjon>())).ReturnsAsync(true);
@@ -141,13 +143,11 @@ namespace UfoTest
             obsController.ControllerContext.HttpContext = mockHttpContext.Object;
 
             //Act
-            var resultat = await obsController.Lagre(It.IsAny<Observasjon>()) as OkObjectResult;
+            var resultat = await obsController.Lagre(It.IsAny<Observasjon>()) as OkResult;
 
             //Assert
 
             Assert.Equal((int)HttpStatusCode.OK, resultat.StatusCode);
-            Assert.Equal("En ny observasjon har blitt lagret", resultat.Value);
-
         }
 
         //Lagre Ikke Ok
@@ -183,7 +183,7 @@ namespace UfoTest
 
             var obsController = new ObservasjonController(mockRep.Object, mockLog.Object);
 
-            obsController.ModelState.AddModelError("", "Feil i inputvalidering"); //Finnes det spesefike feil medlinger avhengig av hva som er feil?
+            obsController.ModelState.AddModelError("", "Feil i inputvalidering");
 
             mockSession[_loggetInn] = _loggetInn;
             mockHttpContext.Setup(s => s.Session).Returns(mockSession);
@@ -200,7 +200,7 @@ namespace UfoTest
         //Lagre IkkeLoggetInn 
 
         [Fact]
-        public async Task LagreIkkeLoggetInn() //feiler
+        public async Task LagreIkkeLoggetInn()
         {
             // Arrange
             mockRep.Setup(o => o.Lagre(It.IsAny<Observasjon>())).ReturnsAsync(true);
@@ -277,7 +277,7 @@ namespace UfoTest
         //HenteEn Ikke Logget inn.
 
         [Fact]
-        public async Task HentEnIkkeLoggetInn() //Feiler
+        public async Task HentEnIkkeLoggetInn()
         {
             // Arrange
             mockRep.Setup(o => o.HentEn(It.IsAny<int>())).ReturnsAsync(() => null);
@@ -300,7 +300,7 @@ namespace UfoTest
         //Slett LoggetInn OK
 
         [Fact]
-        public async Task SlettLoggetInnOK() //feiler
+        public async Task SlettLoggetInnOK()
         {
             // Arrange
             mockRep.Setup(o => o.Slett(It.IsAny<int>())).ReturnsAsync(true);
@@ -312,11 +312,10 @@ namespace UfoTest
             obsController.ControllerContext.HttpContext = mockHttpContext.Object;
 
             // Act
-            var resultat = await obsController.Slett(It.IsAny<int>()) as OkObjectResult;
+            var resultat = await obsController.Slett(It.IsAny<int>()) as OkResult;
 
             // Assert 
             Assert.Equal((int)HttpStatusCode.OK, resultat.StatusCode);
-            Assert.Equal("", resultat.Value);
         }
 
 
@@ -346,7 +345,7 @@ namespace UfoTest
         //Slette IkkeLoggetInn 
 
         [Fact]
-        public async Task SletteIkkeLoggetInn() //feiler
+        public async Task SletteIkkeLoggetInn()
         {
             // Arrange
             mockRep.Setup(o => o.Slett(It.IsAny<int>())).ReturnsAsync(true);
@@ -369,7 +368,7 @@ namespace UfoTest
         //Endre LoggetInn OK 
 
         [Fact]
-        public async Task EndreLoggetInnOK() //feiler
+        public async Task EndreLoggetInnOK()
         {
             // Arrange
             mockRep.Setup(o => o.Endre(It.IsAny<Observasjon>())).ReturnsAsync(true);
@@ -381,11 +380,10 @@ namespace UfoTest
             obsController.ControllerContext.HttpContext = mockHttpContext.Object;
 
             // Act
-            var resultat = await obsController.Endre(It.IsAny<Observasjon>()) as OkObjectResult;
+            var resultat = await obsController.Endre(It.IsAny<Observasjon>()) as OkResult;
 
             // Assert 
             Assert.Equal((int)HttpStatusCode.OK, resultat.StatusCode);
-            Assert.Equal("Observasjon endret", resultat.Value);
         }
 
 

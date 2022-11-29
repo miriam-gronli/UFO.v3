@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+//Hele dette dokumentet er hentet fra Enhentstest av KundeApp - logginn løsning.
+
 namespace UfoTest
 {
     public class MockHttpSession : ISession

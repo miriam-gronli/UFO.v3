@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj": {}
+    "/Users/miriam/Documents/GitHub/UFO.v3/UfoTest/UfoTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj": {
+    "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/Kunde-SPA-Routing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj",
+        "projectUniqueName": "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/Kunde-SPA-Routing.csproj",
         "projectName": "Kunde-SPA-Routing",
-        "projectPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj",
-        "packagesPath": "C:\\Users\\Orosh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\obj\\",
+        "projectPath": "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/Kunde-SPA-Routing.csproj",
+        "packagesPath": "/Users/miriam/.nuget/packages/",
+        "outputPath": "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Orosh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/miriam/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,6 +76,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.1.31, 3.1.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,36 +98,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj": {
+    "/Users/miriam/Documents/GitHub/UFO.v3/UfoTest/UfoTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
+        "projectUniqueName": "/Users/miriam/Documents/GitHub/UFO.v3/UfoTest/UfoTest.csproj",
         "projectName": "UfoTest",
-        "projectPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
-        "packagesPath": "C:\\Users\\Orosh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\obj\\",
+        "projectPath": "/Users/miriam/Documents/GitHub/UFO.v3/UfoTest/UfoTest.csproj",
+        "packagesPath": "/Users/miriam/.nuget/packages/",
+        "outputPath": "/Users/miriam/Documents/GitHub/UFO.v3/UfoTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Orosh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/miriam/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj": {
-                "projectPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj"
+              "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/Kunde-SPA-Routing.csproj": {
+                "projectPath": "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing/Kunde-SPA-Routing.csproj"
               }
             }
           }
@@ -162,12 +172,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
