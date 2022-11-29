@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Bruker } from "../Bruker";
 
+//Kilde:https://github.com/karol-121/Webapplikasjoner-Oppgave/blob/main/Webapplication-Admin/Webapplication-Admin/ClientApp/src/app/logg-inn/logg-inn.ts , basert på kode hentet herfra og bygget på videre
+
 @Component({
   templateUrl: "loggInn.html"
 })
@@ -33,7 +35,7 @@ export class LoggInn {
     bruker.brukernavn = this.skjema_loggInn.value.brukernavn;
     bruker.passord = this.skjema_loggInn.value.passord;
 
-        // CHANGED to logginn
+        
     this.http.post("api/observasjon/logginn", bruker)
       .subscribe(success => {
          this.router.navigate(['/liste']);
