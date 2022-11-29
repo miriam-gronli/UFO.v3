@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Kunde_SPA_Routing.Controllers
 {
-    //[Route("[controller]/[action]")]
+
     //Denne klassen er hentet fra KundeApp2-med-DB filen i KundeApp2-med-DAL mappen fra canvas
     [ApiController]
     [Route("api/[controller]")]
@@ -21,11 +21,7 @@ namespace Kunde_SPA_Routing.Controllers
         private ILogger<ObservasjonController> _log; //Initierer IILoggerFactory i controllern
 
         private const string _loggetInn = "loggetInn";
-
-        //Logginn fix? 
-        //private readonly string _authorizationToken = "authorizationToken";
-
-
+      
 
         //Dependency Injection av IObservasjonRepository
         //ILogger blir tatt inn i controllern
@@ -40,8 +36,8 @@ namespace Kunde_SPA_Routing.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized("Ikke logget inn");
                 HttpContext.Session.SetString(_loggetInn, "");
+                return Unauthorized("Ikke logget inn");                
             }
             if (ModelState.IsValid)
             {
@@ -62,8 +58,8 @@ namespace Kunde_SPA_Routing.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized("Ikke logget inn");
                 HttpContext.Session.SetString(_loggetInn, "");
+                return Unauthorized("Ikke logget inn");                
             }
             List<Observasjon> alleObservasjoner = await _db.HentAlle();
 
@@ -81,8 +77,8 @@ namespace Kunde_SPA_Routing.Controllers
 
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized("Ikke logget inn");
                 HttpContext.Session.SetString(_loggetInn, "");
+                return Unauthorized("Ikke logget inn");                
             }
             bool returOK = await _db.Slett(id);
             if (!returOK)
@@ -98,8 +94,8 @@ namespace Kunde_SPA_Routing.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized("Ikke logget inn");
                 HttpContext.Session.SetString(_loggetInn, "");
+                return Unauthorized("Ikke logget inn");                
             }
             if (ModelState.IsValid)
             {
@@ -120,8 +116,8 @@ namespace Kunde_SPA_Routing.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized("Ikke logget inn");
                 HttpContext.Session.SetString(_loggetInn, "");
+                return Unauthorized("Ikke logget inn");
             }
             if (ModelState.IsValid)
             {
@@ -137,7 +133,7 @@ namespace Kunde_SPA_Routing.Controllers
             return BadRequest("Feil i inputvalidering på server");
         }
 
-        // CHANGED to logginn
+        
         [HttpPost("logginn")]
         public async Task<ActionResult> LoggInn(Bruker bruker)
         {
@@ -147,8 +143,7 @@ namespace Kunde_SPA_Routing.Controllers
                 if (!returnOK)
                 {
                     _log.LogInformation("Innloggingen feilet for bruker " + bruker.Brukernavn);
-                    HttpContext.Session.SetString(_loggetInn, "");
-                    // CHANGED to Unauthorized
+                    HttpContext.Session.SetString(_loggetInn, "");                   
                     return Unauthorized();
                 }
                 HttpContext.Session.SetString(_loggetInn, "LoggetInn");
@@ -158,13 +153,11 @@ namespace Kunde_SPA_Routing.Controllers
             return BadRequest("Feil i inputvalidering på server");
         }
 
-        // CHANGED to loggut
-        [HttpPost("loggut")]
-        // CHANGED to Task<ActionResult> 
+        
+        [HttpPost("loggut")]        
         public async Task<ActionResult> LoggUt()
         {
             HttpContext.Session.SetString(_loggetInn, "");
-            // CHANGED to return
             return Ok(true);
         }
     }

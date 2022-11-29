@@ -72,3 +72,8 @@ SyntaxError
 2022-11-29T01:48:03.8069244+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2022-11-29T01:48:03.8223798+01:00  [INF] Hosting environment: "Development" (c3307c92)
 2022-11-29T01:48:03.8229145+01:00  [INF] Content root path: "C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing" (b5d60022)
+2022-11-29T13:11:15.1922830+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-29T13:11:15.2236530+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-29T13:11:15.2529820+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-29T13:11:15.2781560+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-29T13:11:15.3042890+01:00  [INF] Content root path: "/Users/miriam/Documents/GitHub/UFO.v3/Kunde-SPA-Routing" (b5d60022)
