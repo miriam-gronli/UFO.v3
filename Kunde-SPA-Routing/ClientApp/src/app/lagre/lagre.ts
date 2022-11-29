@@ -7,10 +7,10 @@ import { Observasjon } from "../Observasjon";
 @Component({
   templateUrl: "lagre.html"
 })
-export class Lagre {
+export class Lagre {  //All kode i denne filen, bortsett fra noen av inputvalideringene, er hentet fra "Kunde-SPA-Routing" modul videoen fra Canvas
   skjema: FormGroup;
   
-  validering = {
+  validering = {   //Inputvalideringen i denne filen er hentet fra modulvideoen "Inputvalidering" på canvas, og er ellers selvutviklet eller fra internett
     id: [""],
     navn: [
       null, Validators.compose([Validators.required, Validators.pattern("[0-9a-zA-ZøæåØÆÅ\\:_@#/,'()-. ]{2,30}")])

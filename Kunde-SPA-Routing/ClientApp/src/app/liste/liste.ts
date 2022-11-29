@@ -7,7 +7,7 @@ import { Observasjon } from "../Observasjon";
 @Component({
   templateUrl: "liste.html"
 })
-export class Liste {
+export class Liste {  //All kode i denne filen er hentet fra "Kunde-SPA-Routing" modul videoen på Canvas
   alleObservasjoner: Array<Observasjon>;
   laster: boolean;
 

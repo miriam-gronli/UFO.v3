@@ -12,6 +12,8 @@ namespace Kunde_SPA_Routing.Controllers
 {
 
     //Denne klassen er hentet fra KundeApp2-med-DB filen i KundeApp2-med-DAL mappen fra canvas
+    //Alle linjer med logging (ILogger) og feilhåndtering (BadRequest(), Ok(), NotFound(), Unauthorized() osv.)
+    //er hentet fra modul videoene "Feilhåndtering" og "Logging til fil" på Canvas
     [ApiController]
     [Route("api/[controller]")]
     public class ObservasjonController : ControllerBase
@@ -47,7 +49,7 @@ namespace Kunde_SPA_Routing.Controllers
                     _log.LogInformation("Observasjon kunne ikke lagres");
                     return BadRequest("Observasjon kunne ikke lagres");
                 }
-                return Ok("En ny observasjon har blitt lagret");
+                return Ok();
             }
             _log.LogInformation("Feil i inputvalidering");
             return BadRequest("Feil i inputvalidering på server");
@@ -86,7 +88,7 @@ namespace Kunde_SPA_Routing.Controllers
                 _log.LogInformation("Sletting av observasjon ble ikke utført");
                 return NotFound("Sletting av observasjon ble ikke utført");
             }
-            return Ok("Observasjon slettet");
+            return Ok();
         }
 
         [HttpGet("{id}")]
@@ -127,7 +129,7 @@ namespace Kunde_SPA_Routing.Controllers
                     _log.LogInformation("Endringen kunne ikke utføres");
                     return NotFound("Endringen av observasjonen kunne ikke utføres");
                 }
-                return Ok("Observasjon endret");
+                return Ok();
             }
             _log.LogInformation("Feil i inputvalidering");
             return BadRequest("Feil i inputvalidering på server");

@@ -53,7 +53,7 @@ namespace Kunde_SPA_Routing
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                loggerFactory.AddFile("Logs/ObservasjonerLog.txt");
+                loggerFactory.AddFile("Logs/ObservasjonerLog.txt"); //Denne koden er hentet fra modulvideoen "Logging til fil" på Canvas
                 DBInit.Initialize(app); // denne m? fjernes dersom vi vil beholde dataene i databasen og ikke initialisere 
             }
             else
