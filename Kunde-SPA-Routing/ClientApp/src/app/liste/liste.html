@@ -1,97 +1,42 @@
-<div class="container">
+<app-nav-meny></app-nav-meny>
+
   <div class="text-center">
-    <h2>  UFO Observasjon Database: Single Page Application (SPA) </h2>
+    <h2>  UFO Observasjon Database </h2>
   </div>
-  <div>
-    <div class="col-md-12">
+
       <div *ngIf="laster">Laster Observasjoner.....</div>
-      <!-- CHANGED to call angular fn -->
-      <span><button class="btn btn-primary" (click)="loggUt()">Logg ut</button></span>
-      <!--
-      <table class="table table-bordered table-condensed">
-          <thead>
-              <tr>
-                  <th>Navn</th>
-                  <th>Postkode</th>
-                  <th>Beskrivelse</th>
-                  <th>Dato</th>
-                  <th>tid</th>
-                  <th>Slette</th>
-                  <th>Endre</th>
-              </tr>
-          </thead>
-          <tbody *ngFor="let observasjon of alleObservasjoner">
-              <tr>
-                  <td>{{observasjon.navn}}</td>
-                  <td>{{observasjon.postkode}}</td>
-                  <td>{{observasjon.beskrivelse}}</td>
-                  <td>{{observasjon.dato}}</td>
-                  <td>{{observasjon.tid}}</td>
-                  <td><button class="btn btn-danger" (click)="sletteObservasjon(observasjon.id)">Slett</button></td>
-                  <td><button class="btn btn-success" [routerLink]="['/endre',observasjon.id]">Endre</button></td>
-              </tr>
-          </tbody>
-      </table> -->
+
       <div>
-        <div class="" *ngFor="let observasjon of alleObservasjoner">
-
-          <div class="card">
-            <div class="row no-gutters g-0">
-              <div class="containerNavn text-left col">
-                <div class="bg-primary text-white ">
-                  <div class="card-body">
-                    <div class="card-title">Navn</div>
-                    <div class="card-text">{{observasjon.navn}}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="containerPostkode text-left col">
-                <div class="bg-secondary text-white">
-                  <div class="card-body">
-                    <div class="card-title">Postkode</div>
-                    <div class="card-text">{{observasjon.postkode}}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row no-gutters g-0">
-              <div class="containerDato text-left col">
-                <div class="bg-secondary text-white">
-                  <div class="card-body">
-                    <div class="card-title">Dato</div>
-                    <div class="card-text">{{observasjon.dato}}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="containerTidspunkt text-left col">
-                <div class="bg-primary text-white">
-                  <div class="card-body">
-                    <div class="card-title">Tidspunkt</div>
-                    <div class="card-text">{{observasjon.tid}}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="containerObv text-left">
-              <div class="bg-dark text-white">
-                <div class="card-body">
-                  <div class="card-title">Beskrivelse av observasjon</div>
-                  <div class="card-text">{{observasjon.beskrivelse}}</div>
-                </div>
-              </div>
-            </div>
+        <div class="col-md-12">
+          <div *ngIf="laster">Laster observasjoner.....</div>
+          <table class="table table-bordered table-condensed" style="width: 60%;">
+            <thead>
+              <tr>
+                <th>Navn</th>
+                <th>Postkode</th>
+                <th>Dato</th>
+                <th>Tid</th>
+                <th>Beskrivelse</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let observasjon of alleObservasjoner">
+              <tr>
+                <td>{{observasjon.navn}}</td>
+                <td>{{observasjon.postkode}}</td>
+                <td>{{observasjon.dato}}</td>
+                <td>{{observasjon.tid}}</td>
+                <td>{{observasjon.beskrivelse}}</td>
+                <td><button class="btn btn-danger" (click)="sletteObservasjon(observasjon.id)">Slett</button></td>
+                <td><button class="btn btn-success" [routerLink]="['/endre',observasjon.id]">Endre</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="buttonDiv">
+            <button class='btn btn-primary' routerLink="/lagre">Lagre observasjon</button>
+            <button class="btn btn-primary" (click)="loggUt()">Logg ut</button>
           </div>
 
-          <button class="btn btn-danger" (click)="sletteObservasjon(observasjon.id)">Slett</button>
-          <button class="btn btn-success" [routerLink]="['/endre',observasjon.id]">Endre</button>
         </div>
-        <button class='btn btn-primary' routerLink="/lagre">Lagre observasjon</button>
       </div>
-    </div>
-  </div>
-</div>

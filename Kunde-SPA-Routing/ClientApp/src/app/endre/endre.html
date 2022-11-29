@@ -1,72 +1,4 @@
-<!-- <div class="container">
-  <div class="col-md-4">
-    <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
-      <input class="form-control" formControlName="id" type="hidden" />
-      <div class="form-group">
-        <label>Navn</label>
-        <input class="form-control" formControlName="navn" />
-        <p class="alert alert-warning" [hidden]="skjema.controls.navn.valid || (skjema.controls.navn.pristine && !submitted)">
-          Navn er obligatorisk.
-        </p>
-      </div>
-      <div class="form-group">
-        <label>Postkode</label>
-        <input class="form-control" formControlName="postkode" />
-        <p class="alert alert-warning" [hidden]="skjema.controls.postkode.valid || (skjema.controls.postkode.pristine && !submitted)">
-          Postkode er obligatorisk (4 siffer)
-        </p>
-      </div>
-      <div class="form-group">
-        <label>Beskrivelse</label>
-        <input class="form-control" formControlName="beskrivelse" />
-        <p class="alert alert-warning" [hidden]="skjema.controls.beskrivelse.valid || (skjema.controls.beskrivelse.pristine && !submitted)">
-          Beskrivelse er obligatorisk.
-        </p>
-      </div>
-      <div class="form-group">
-        <label>Dato</label>
-        <input class="form-control" formControlName="dato" />
-        <p class="alert alert-warning" [hidden]="skjema.controls.dato.valid || (skjema.controls.dato.pristine && !submitted)">
-          Dato er obligatorisk.
-        </p>
-      </div>
-      <div class="form-group">
-        <label>Tid</label>
-        <input class="form-control" formControlName="tid" />
-        <p class="alert alert-warning" [hidden]="skjema.controls.tid.valid || (skjema.controls.tid.pristine && !submitted)">
-          Tid er obligatorisk.
-        </p>
-      </div>
-      <div class="form-group">
-        <button type="submit" [disabled]="!skjema.valid" class="btn btn-primary">Endre</button>
-        <button class="btn btn-default" routerLink="/liste">Tilbake</button>
-      </div>
-    </form>
-  </div>
-</div> -->
-
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="endre.ts"></script>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-</head>
-
-<body>
-
-  <!-- Navigasjonsbar
-  <header>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="lagre.html">Observasjon</a></li>
-        <li><a href="about.html">Om oss</a></li>
-      </ul>
-    </div>
-  </header>
-  -->
+<app-nav-meny></app-nav-meny>
   <!--Bakgrunn med overskrift-->
   <div class="text-center">
     <h1 class="overskrift">Fortell oss det du vet!</h1>
@@ -74,7 +6,7 @@
 
   <!--Registreringsskjema-->
   <div class="text-center">
-    <div class="">
+    <div class="skjemaLagre">
       <form [formGroup]="skjema" (ngSubmit)="vedSubmit()">
         <input class="form-control" formControlName="id" type="hidden" />
 
@@ -136,7 +68,3 @@
     </div>
 
   </div>
-
-</body>
-
-</html>

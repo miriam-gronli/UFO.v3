@@ -1,0 +1,71 @@
+2022-11-29T00:24:50.5903242+01:00  [ERR] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+SyntaxError
+
+(25:3) Unknown word
+
+  23 | .containerNav {
+  24 |   background-color: black;
+> 25 |   display; inline;
+     |   ^
+  26 | }
+  27 | 
+
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\postcss-loader\src\index.js:207:9
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ (67b8f6a2)
+2022-11-29T00:26:44.7676929+01:00  [ERR] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+SyntaxError
+
+(43:5) Unknown word
+
+  41 | 
+  42 | ul{
+> 43 |     margin-left; 50%;
+     |     ^
+  44 | }
+  45 | 
+
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\postcss-loader\src\index.js:207:9
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at runNextTicks (internal/process/task_queues.js:62:3)
+    at processTimers (internal/timers.js:494:9)
+ (64104d74)
+2022-11-29T00:37:39.5668015+01:00  [ERR] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+SyntaxError
+
+(34:10) Missed semicolon
+
+  32 | #test,#brukernavn_field,#passord_field {
+  33 |   margin: auto;
+> 34 |   width: 50
+     |          ^
+  35 |   text-align: center;
+  36 | }
+
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\postcss-loader\src\index.js:207:9
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ (6b899046)
+2022-11-29T01:42:14.7406280+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-29T01:42:14.7527723+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-29T01:42:14.7529310+01:00  [INF] Content root path: "C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing" (b5d60022)
