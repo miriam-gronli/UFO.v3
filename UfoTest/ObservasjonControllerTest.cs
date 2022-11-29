@@ -506,8 +506,8 @@ namespace UfoTest
             var resultat = await obsController.LoggInn(returBruker) as OkObjectResult;
 
             // Assert 
-            Assert.Equal((int)HttpStatusCode.OK, resultat.StatusCode);
-            Assert.False((bool)resultat.Value);
+            Assert.Equal((int)HttpStatusCode.Unauthorized, resultat.StatusCode);
+            Assert.Equal("Logget ikke inn", resultat.Value);         
         }
 
         //Logg Inn Input Feil

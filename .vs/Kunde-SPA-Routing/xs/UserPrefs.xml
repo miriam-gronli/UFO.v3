@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{ACB74181-4626-457D-8F75-254055E59D08}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UfoTest/ObservasjonControllerTest.cs">
+    <Files>
+      <File FileName="Kunde-SPA-Routing/Controllers/ObservasjonController.cs" Line="23" Column="55" />
+      <File FileName="UfoTest/ObservasjonControllerTest.cs" Line="387" Column="71" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kunde-SPA-Routing" expanded="True">
+            <Node name="Kunde-SPA-Routing" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="UfoTest" expanded="True">
+              <Node name="ObservasjonControllerTest.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Kunde-SPA-Routing" expanded="True">
+            <Node name="UfoTest" expanded="True">
+              <Node name="UfoTest" expanded="True">
+                <Node name="ObservasjonControllerTest" expanded="True">
+                  <Node name="EndreLoggetInnOK" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Kunde-SPA-Routing PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
