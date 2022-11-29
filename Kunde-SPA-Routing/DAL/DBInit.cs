@@ -27,7 +27,7 @@ namespace Kunde_SPA_Routing.DAL
                     Postkode = "0001",
                     Beskrivelse = "Grønn UFO",
                     Navn = "Ola Nordmann",
-                    Dato = "1 januar 2022",
+                    Dato = "01.02.2019",
                     Tid = "22:30"
                 };
 
@@ -37,7 +37,7 @@ namespace Kunde_SPA_Routing.DAL
                     Postkode = "0002",
                     Beskrivelse = "Blå UFO",
                     Navn = "Sam Møller",
-                    Dato = "2 januar 2022",
+                    Dato = "24.02.2000",
                     Tid = "21:30"
                 };
                 var observasjon3 = new Observasjoner //Dummy data #2
@@ -46,7 +46,7 @@ namespace Kunde_SPA_Routing.DAL
                     Postkode = "0003",
                     Beskrivelse = "Rød UFO",
                     Navn = "Jonas Hansen",
-                    Dato = "3 januar 2022",
+                    Dato = "12.11.1999",
                     Tid = "20:30"
                 };
 

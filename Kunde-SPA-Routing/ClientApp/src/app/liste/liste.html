@@ -1,42 +1,21 @@
 <app-nav-meny></app-nav-meny>
 
-  <div class="text-center">
-    <h2>  UFO Observasjon Database </h2>
+<div class="text-center">
+  <h2>  UFO Observasjon Database </h2>
+</div>
+
+<div class="" *ngFor="let observasjon of alleObservasjoner">
+  <div id="tabellCenter">
+    <div id="navn"><a id="text">Navn:</a> <br> {{observasjon.navn}}</div>
+    <div id="postkode"><a id="text">Postkode:</a> <br> {{observasjon.postkode}}</div>
+    <div id="tid"><a id="text">Tid:</a> <br> {{observasjon.tid}}</div>
+    <div id="dato"><a id="text">Dato:</a> <br> {{observasjon.dato}}</div>
+    <div id="beskrivelse"><a id="text">Beskrivelse:</a> <br> {{observasjon.beskrivelse}}</div>
+    <div id="knapp1"><button class="btn btn-danger" (click)="sletteObservasjon(observasjon.id)" id="slettBtn">Slett</button></div>
+    <div id="knapp2"><button class="btn btn-success" [routerLink]="['/endre',observasjon.id]" id="endreBtn">Endre</button></div>
   </div>
+</div>
+<div id="buttonDiv">
+  <button class='btn btn-primary' routerLink="/lagre" id="lagreBtn">Lagre observasjon</button>
+</div>
 
-      <div *ngIf="laster">Laster Observasjoner.....</div>
-
-      <div>
-        <div class="col-md-12">
-          <div *ngIf="laster">Laster observasjoner.....</div>
-          <table class="table table-bordered table-condensed" style="width: 60%;">
-            <thead>
-              <tr>
-                <th>Navn</th>
-                <th>Postkode</th>
-                <th>Dato</th>
-                <th>Tid</th>
-                <th>Beskrivelse</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let observasjon of alleObservasjoner">
-              <tr>
-                <td>{{observasjon.navn}}</td>
-                <td>{{observasjon.postkode}}</td>
-                <td>{{observasjon.dato}}</td>
-                <td>{{observasjon.tid}}</td>
-                <td>{{observasjon.beskrivelse}}</td>
-                <td><button class="btn btn-danger" (click)="sletteObservasjon(observasjon.id)">Slett</button></td>
-                <td><button class="btn btn-success" [routerLink]="['/endre',observasjon.id]">Endre</button></td>
-              </tr>
-            </tbody>
-          </table>
-          <div id="buttonDiv">
-            <button class='btn btn-primary' routerLink="/lagre">Lagre observasjon</button>
-            <button class="btn btn-primary" (click)="loggUt()">Logg ut</button>
-          </div>
-
-        </div>
-      </div>

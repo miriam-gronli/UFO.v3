@@ -29,6 +29,10 @@ body {
     width: 100%;
 }
 
+/*
+CSS FOR LOGIN HTML
+*/
+
 #test,#brukernavn_field,#passord_field {
   margin: auto;
   width: 50%;
@@ -37,34 +41,137 @@ body {
   margin-top: 5%;
 }
 
+/*
+CSS FOR Å ALLIGNE KNAPP
+*/
 
-
-#navbarSupportedContent{
-    margin-left:
-}
-
-table {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-}
 #buttonDiv {
   margin: auto;
   width: 50%;
   padding: 10px;
   text-align: center;
 }
+
 .text-center{
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
+/*
+CSS FOR REGISTRERINGS SKJEMA
+*/
+
 .skjemaLagre {
   width: 50%;
   margin: auto;
-  width: 50%;
   padding: 10px;
   text-align: center;
+}
+
+/*
+CSS FOR LOGIN HTML
+*/
+
+#strekT,#strekB {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #393939;
+  padding: 2px;
+}
+
+#strekT{
+    margin-bottom: 5%;
+}
+
+#strekB{
+    margin-top: 5%;
+}
+
+/*
+CSS FOR NAVBAR
+*/
+
+#navBilde{
+    margin-left: -20%;
+}
+
+.navbar-nav.ms-auto li a {
+  color: white;
+  font-weight: bold;
+}
+
+/*
+CSS FOR Å LISTE OBSERVASJONER
+*/
+
+#tabellCenter {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  border-style: solid;
+  border-color: #333;
+  margin-bottom: 2%;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+#navn {
+  padding-left: 5px;
+  width: 25%;
+  border-right: 3px solid;
+}
+
+#postkode, #tid {
+  width: 15%;
+  border-right: 3px solid;
+  padding-left: 5px;
+}
+
+#beskrivelse {
+  padding-left: 5px;
+  border-right: 3px solid;
+  width: 65%;
+}
+
+#dato {
+  padding-left: 5px;
+  border-right: 3px solid;
+  width: 20%;
+}
+
+/*
+CSS FOR KNAPPER PÅ ALLE HTML SIDER
+*/
+
+#knapp1, #knapp2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+
+}
+
+#text{
+    font-weight: bold;
+}
+
+#lagreBtn, #registrerBtn {
+  background-color: #333;
+  border-color: black;
+  border-radius: 15px;
+}
+
+#slettBtn{
+    background-color: #333;
+    color: red;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+#endreBtn {
+  background-color: #333;
+  color: green;
+  border-width: 2px;
+  border-radius: 10px;
 }
 

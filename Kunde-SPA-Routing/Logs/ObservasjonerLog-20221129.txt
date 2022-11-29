@@ -221,3 +221,31 @@ System.Security.Cryptography.CryptographicException: The payload was invalid.
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
    at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2022-11-29T19:22:10.0089275+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-29T19:22:10.0185201+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-29T19:22:10.0186938+01:00  [INF] Content root path: "C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing" (b5d60022)
+2022-11-29T20:24:40.6115851+01:00  [ERR] ERROR in ./src/styles.css
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):
+SyntaxError
+
+(110:5) Unknown word
+
+  108 | #postkode,#tid{
+  109 |     width:15%;
+> 110 |     border-solid;
+      |     ^
+  111 | }
+  112 | #beskrivelse{
+
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\webpack\lib\NormalModule.js:313:20
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing\ClientApp\node_modules\postcss-loader\src\index.js:207:9
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+ (e7c8f8f2)
+2022-11-29T20:36:18.8560011+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-29T20:36:18.8650464+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-29T20:36:18.8652545+01:00  [INF] Content root path: "C:\Users\Orosh\Source\Repos\UFO.v3\Kunde-SPA-Routing" (b5d60022)

@@ -7900,9 +7900,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orosh\\source\\repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
+      "projectUniqueName": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
       "projectName": "UfoTest",
-      "projectPath": "C:\\Users\\Orosh\\source\\repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
+      "projectPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\UfoTest.csproj",
       "packagesPath": "C:\\Users\\Orosh\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\UfoTest\\obj\\",
       "projectStyle": "PackageReference",
@@ -7921,8 +7921,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Orosh\\source\\repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj": {
-              "projectPath": "C:\\Users\\Orosh\\source\\repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj"
+            "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj": {
+              "projectPath": "C:\\Users\\Orosh\\Source\\Repos\\UFO.v3\\Kunde-SPA-Routing\\Kunde-SPA-Routing.csproj"
             }
           }
         }
